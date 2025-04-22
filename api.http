@@ -1,0 +1,568 @@
+### *********USERS*********
+
+### ****AREAS****
+###AREAS GET ALL
+GET http://localhost:1234/areas
+
+### AREAS CREATE
+POST http://localhost:1234/areas
+Content-Type: application/json
+
+{
+  "nameArea": "Nacional"
+}
+
+###AREAS DELETE
+DELETE http://localhost:1234/areas/6ea0ec42-559a-4103-a357-2926dee72e49
+
+###UPDATE AREA
+PUT http://localhost:1234/areas/6ea0ec42-559a-4103-a357-2926dee72e49
+Content-Type: application/json
+
+{
+  "nameArea": "Hola a todos"
+}
+
+### ****REGIONS****
+###REGIONS GET ALL
+GET http://localhost:1234/regions
+
+###REGIONS CREATE
+POST http://localhost:1234/regions
+Content-Type: application/json
+
+{
+  "nameRegion": "La Paz"
+}
+
+###REGIONS DELETE
+DELETE http://localhost:1234/regions/829f202d-3b5a-4103-bf48-9bfbd319d8f8
+
+###REGIONS UPDATE
+PUT http://localhost:1234/regions/829f202d-3b5a-4103-bf48-9bfbd319d8f8
+Content-Type: application/json
+
+{
+  "nameRegion": "Santa Cruz"
+}
+
+### ****ROLES****
+###ROLES GET ALL
+GET http://localhost:1234/roles
+
+###ROLES CREATE
+POST http://localhost:1234/roles
+Content-Type: application/json
+
+{
+  "nameRole": "Técnico"
+}
+
+###ROLES DELETE
+DELETE http://localhost:1234/roles/0e191897-f234-4079-b518-c7d346d1886c
+
+###ROLES UPDATE
+PUT http://localhost:1234/roles/0e191897-f234-4079-b518-c7d346d1886c
+Content-Type: application/json
+
+{
+  "nameRole": "Técnico"
+}
+
+### ****USERS****
+
+###LOGIN USER
+POST http://localhost:1234/login
+Content-Type: application/json
+
+{
+  "userNick": "cabreraSam",
+  "userPassword": "a1b2c3d4c0"
+}
+
+###AUTHORIZED
+GET http://localhost:1234/login/authorized
+
+###USERS GET ALL
+GET http://localhost:1234/users
+
+###ROLES CREATE
+POST http://localhost:1234/users
+Content-Type: application/json
+
+{
+  "userName": "Samuel Alejandro Alcazar",
+  "userNick": "saalcazar",
+  "passwordUser": "a1b2c3d4c0",
+  "idArea": "56328e57-8059-4446-a976-09f19d3b89b4",
+  "idRole": "6521da81-2224-4677-9cb5-1f1788bb469b",
+  "idRegion": "ce34f46d-e226-4fae-8ec6-6867b76d86c6"
+}
+
+###ROLES DELETE
+DELETE http://localhost:1234/users/24ddbc66-2aa6-4c81-877f-27eac57ea32c
+
+###ROLES UPDATE
+PUT http://localhost:1234/users/24ddbc66-2aa6-4c81-877f-27eac57ea32c
+Content-Type: application/json
+
+{
+  "userName": "Samuel Cabrera",
+  "userNick": "cabrerasam25",
+  "passwordUser": "mi4v-aee3-5939",
+  "idArea": "c7e30e65-92a9-4a15-bd4d-ab65c64073c8",
+  "idRole": "3d5ce1c1-bc39-45c6-9f18-784c8cc3b60b",
+  "idRegion": "dab324c2-e972-4eba-90a3-98c842068d07"
+}
+
+### *******SUBJECTS*******
+
+### ****INDIVIDUALS****
+
+###INDIVIDUAL GETALL
+GET http://localhost:1234/individuals
+
+###INDIVIDUAL GET
+GET http://localhost:1234/individuals/a60f2f67-b4df-4c2e-bd23-c074f7e229d1
+
+###INDIVIDUAL CREATE
+POST http://localhost:1234/individuals
+Content-Type: application/json
+
+{
+  "nameIndividual": "Alejandro Cabrera",
+  "nationalityIndividual": "Boliviano",
+  "birthDateIndividual": "1984-07-07",
+  "placeBirthIndividual": "La Paz",
+  "genderIndividual": "Masculino",
+  "maritalIndividual": "Casado",
+  "photoIndividual": "http://ruta.foto",
+  "partyIndividual": "MAS",
+  "workIndividual": "Programador",
+  "educationIndividual": "Lic.",
+  "emailIndividual": "alcazar.samuel@gmail.com",
+  "phoneIndividual": "67100787",
+  "networksIndividual": {
+    "facebook": "https://facebook.com",
+    "x": "https://x.com"
+  },
+  "idUser": "be565884-17ad-4dbb-b649-b59b37d85f0c"
+}
+
+###INDIVIDUAL DELETE
+DELETE http://localhost:1234/individuals/fbc4fc9b-f4a0-4872-9612-09ceff310ef6
+
+###INDIVIDUAL UPDATE
+PUT http://localhost:1234/individuals/93853051-1122-4683-8c08-1bffab7d3ca3
+Content-Type: application/json
+
+{
+  "nameIndividual": "Alejandro Samuel Cabrera",
+  "nationalityIndividual": "Boliviano",
+  "birthDateIndividual": "1984-07-07",
+  "placeBirthIndividual": "El Alto",
+  "genderIndividual": "Masculino",
+  "maritalIndividual": "Casado",
+  "photoIndividual": "http://ruta.foto",
+  "partyIndividual": "MAS",
+  "workIndividual": "Programador",
+  "educationIndividual": "Lic.",
+  "emailIndividual": "alcazar.samuel@gmail.com",
+  "phoneIndividual": "67100787",
+  "networksIndividual": {
+    "facebook": "https://facebook.com",
+    "x": "https://x.com"
+  },
+  "idUser": "be565884-17ad-4dbb-b649-b59b37d85f0c"
+}
+
+###COLLECTIVES
+
+###COLLECTIVE GETALL
+GET http://localhost:1234/collectives
+
+###COLLECTIVE CREATE
+POST http://localhost:1234/collectives
+Content-Type: application/json
+
+{
+  "nameCollective": "MNR",
+  "logoCollective": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+  "originCollective": "Nacional",
+  "typeCollective": "Partido político",
+  "headquartersCollective": "El Alto",
+  "descriptionCollective": "En la actualidad el CEADL, es una creación colectiva de grupos de jóvenes y profesionales.",
+  "missionCollective": "Fortalecemos personas y organizaciones sociales en sus capacidades participativas y de incidencia para construir una cultura e institucionalidad democrática en el Estado y la sociedad civil, precautelando el ejercicio pleno de los Derechos Humanos y Ciudadanos a nivel local y nacional, en el marco de los Objetivos de Desarrollo Sostenible.",
+  "visionCollective": "Personas individuales y organizaciones de la sociedad civil, con énfasis en las juventudes, mujeres y pueblos indígenas, participan de forma organizada, democrática y equitativa en diversos espacios sociopolíticos para la reivindicación y el ejercicio pleno de sus Derechos Humanos y Ciudadanos.",
+  "networkCollective": {
+    "facebook": "https://facebook.com/ceadl",
+    "x": "https://x.com/ceadl"
+  },
+  "infAreaCollective": "El Alto, Lapaz, Sucre, Tarija",
+  "financingCollective": "SAIH Noruega",
+  "personalCollective": {
+    "director": "Juan Carlos Balderas",
+    "técnico": "Joel Ibarra Batallanos"
+  },
+  "idUser": "a80ff520-4086-4bc0-ac38-2f8efa39d4e4"
+}
+
+###COLLECTIVE DELETE
+DELETE http://localhost:1234/collectives/f027e4e3-e73f-4531-ad16-cf2203f88b7d
+
+###COLLECTIVE UPDATE
+PUT http://localhost:1234/collectives/58408223-bd1f-4a8b-b06c-1cfd559954f8
+Content-Type: application/json
+
+{
+  "nameCollective": "CEDLA",
+  "originCollective": "Nacional",
+  "typeCollective": "ONG",
+  "headquartersCollective": "El Alto",
+  "descriptionCollective": "En la actualidad el CEADL, es una creación colectiva de grupos de jóvenes y profesionales.",
+  "missionCollective": "Fortalecemos personas y organizaciones sociales en sus capacidades participativas y de incidencia para construir una cultura e institucionalidad democrática en el Estado y la sociedad civil, precautelando el ejercicio pleno de los Derechos Humanos y Ciudadanos a nivel local y nacional, en el marco de los Objetivos de Desarrollo Sostenible.",
+  "visionCollective": "Personas individuales y organizaciones de la sociedad civil, con énfasis en las juventudes, mujeres y pueblos indígenas, participan de forma organizada, democrática y equitativa en diversos espacios sociopolíticos para la reivindicación y el ejercicio pleno de sus Derechos Humanos y Ciudadanos.",
+  "networkCollective": {
+    "facebook": "https://facebook.com/ceadl",
+    "x": "https://x.com/ceadl"
+  },
+  "infAreaCollective": "El Alto, Lapaz, Sucre, Tarija",
+  "financingCollective": "SAIH Noruega",
+  "personalCollective": {
+    "director": "Juan Carlos Balderas",
+    "técnico": "Joel Ibarra Batallanos"
+  },
+  "idUser": "be565884-17ad-4dbb-b649-b59b37d85f0c"
+}
+
+### ****ASSOCIATIONS****
+###ASSOCIATIONS GET ALL
+GET http://localhost:1234/associations
+
+###ASSOCIATIONS CREATE
+POST http://localhost:1234/associations
+Content-Type: application/json
+
+{
+  "association": "Estado mayor del pueblo",
+  "idUser": "b4b23652-3a82-4d0d-a541-a1f88fd93f6f"
+}
+
+###ASSOCIATIONS DELETE
+DELETE http://localhost:1234/associations/d57125d9-f1fb-4efd-b4a3-1e8fe74fd41e
+
+###ASSOCIATIONS UPDATE
+PUT http://localhost:1234/associations/0ff0ce70-146d-46bf-8aaf-3694189b4f44
+Content-Type: application/json
+
+{
+  "association": "Estado Mayor del Pueblo",
+  "idUser": "b4b23652-3a82-4d0d-a541-a1f88fd93f6f"
+}
+
+### ****SPEACHS****
+###SPEACHS GET ALL
+GET http://localhost:1234/speachs
+
+###SPEACHS CREATE
+POST http://localhost:1234/speachs
+Content-Type: application/json
+
+{
+  "speach": "Dirección del discurso",
+  "titleSpeach": "Estado mayor",
+  "dateSpeach": "2024-11-11",
+  "idIndividual": "60ce9c33-e05b-4391-91e2-0ffd80caf7dd",
+  "idUser": "45a2d827-7de0-4f25-b59f-0cb881331181"
+}
+
+###SPEACHS DELETE
+DELETE http://localhost:1234/speachs/0e2185e3-b1d0-441c-9651-0bfa1c5e8ad6
+
+###SPEACHS UPDATE
+PUT http://localhost:1234/speachs/0e2185e3-b1d0-441c-9651-0bfa1c5e8ad6
+Content-Type: application/json
+
+{
+  "speach": "Estado mayor",
+  "idIndividual": "cdabc1d9-51a3-42fc-9774-0ab27a926cf7",
+  "idUser": "be565884-17ad-4dbb-b649-b59b37d85f0c"
+}
+
+### ****WORKS****
+###WORKS GET ALL
+GET http://localhost:1234/works
+
+###WORKS CREATE
+POST http://localhost:1234/works
+Content-Type: application/json
+
+{
+  "work": "Dirección del discurso",
+  "idIndividual": "cdabc1d9-51a3-42fc-9774-0ab27a926cf7",
+  "idUser": "be565884-17ad-4dbb-b649-b59b37d85f0c"
+}
+
+###WORKS DELETE
+DELETE http://localhost:1234/works/c94c4567-5d6f-4670-a825-c908a78dbe47
+
+###WORKS UPDATE
+PUT http://localhost:1234/works/c94c4567-5d6f-4670-a825-c908a78dbe47
+Content-Type: application/json
+
+{
+  "work": "Presidente",
+  "idIndividual": "cdabc1d9-51a3-42fc-9774-0ab27a926cf7",
+  "idUser": "be565884-17ad-4dbb-b649-b59b37d85f0c"
+}
+
+### *******REPORTS*******
+
+### ****DIARIES****
+###DIARIES GET ALL
+GET http://localhost:1234/diaries
+
+###DIARIES CREATE
+POST http://localhost:1234/diaries
+Content-Type: application/json
+
+{
+  "typeDiary": "Política",
+  "priorityDiary": "Media",
+  "confidentialityDiary": "Media",
+  "numDiary": "16",
+  "dateDiary": "2024-11-11",
+  "issueDiary": "Dolar, Diesel",
+  "linkDiary": "Dirección del informe",
+  "idUser": "be565884-17ad-4dbb-b649-b59b37d85f0c"
+}
+
+###DIARIES DELETE
+DELETE http://localhost:1234/diaries/c6d0e95d-a6c2-4f4b-a678-08d5f8ccd78d
+
+###DIARIES UPDATE
+PUT http://localhost:1234/diaries/c6d0e95d-a6c2-4f4b-a678-08d5f8ccd78d
+Content-Type: application/json
+
+{
+  "typeDiary": "Política",
+  "priorityDiary": "Alta",
+  "confidentialityDiary": "Alta",
+  "numDiary": "16",
+  "dateDiary": "2024-11-11",
+  "issueDiary": "Dolar, Diesel",
+  "linkDiary": "Dirección del informe",
+  "idUser": "be565884-17ad-4dbb-b649-b59b37d85f0c"
+}
+
+### ****SUNDAYS****
+###SUNDAYS GET ALL
+GET http://localhost:1234/sundays
+
+###SUNDAYS CREATE
+POST http://localhost:1234/sundays
+Content-Type: application/json
+
+{
+  "typeSunday": "Política",
+  "prioritySunday": "Media",
+  "confidentialitySunday": "Media",
+  "numSunday": "16",
+  "dateSunday": "2024-11-11",
+  "issueSunday": "Dolar, Diesel",
+  "linkSunday": "Dirección del informe",
+  "idUser": "be565884-17ad-4dbb-b649-b59b37d85f0c"
+}
+
+###SUNDAYS DELETE
+DELETE http://localhost:1234/sundays/be565884-17ad-4dbb-b649-b59b37d85f0c
+
+###SUNDAYS UPDATE
+PUT http://localhost:1234/sundays/9baa98fd-99e6-4a20-b22d-ab58dddbb00f
+Content-Type: application/json
+
+{
+  "typeSunday": "Política",
+  "prioritySunday": "Media",
+  "confidentialitySunday": "Media",
+  "numSunday": "16",
+  "dateSunday": "2024-11-11",
+  "issueSunday": "Dolar, Diesel",
+  "linkSunday": "Dirección del informe",
+  "idUser": "be565884-17ad-4dbb-b649-b59b37d85f0c"
+}
+
+### ****ALERTS****
+###ALERTS GET ALL
+GET http://localhost:1234/alerts
+
+###ALERTS CREATE
+POST http://localhost:1234/alerts
+Content-Type: application/json
+
+{
+  "typeAlert": "Política",
+  "priorityAlert": "Media",
+  "confidentialityAlert": "Media",
+  "numAlert": "16",
+  "dateAlert": "2024-11-11",
+  "issueAlert": "Dolar, Diesel",
+  "linkAlert": "Dirección del informe",
+  "idArea": "c7e30e65-92a9-4a15-bd4d-ab65c64073c8",
+  "idUser": "be565884-17ad-4dbb-b649-b59b37d85f0c"
+}
+
+###ALERTS DELETE
+DELETE http://localhost:1234/alerts/45014b96-1a0a-4d62-b880-6b78cb73a082
+
+###ALERTS UPDATE
+PUT http://localhost:1234/alerts/45014b96-1a0a-4d62-b880-6b78cb73a082
+Content-Type: application/json
+
+{
+  "typeAlert": "Política",
+  "priorityAlert": "Alta",
+  "confidentialityAlert": "Alta",
+  "numAlert": "16",
+  "dateAlert": "2024-11-11",
+  "issueAlert": "Marcha Evo",
+  "linkAlert": "Dirección del informe",
+  "idArea": "c7e30e65-92a9-4a15-bd4d-ab65c64073c8",
+  "idUser": "be565884-17ad-4dbb-b649-b59b37d85f0c"
+}
+
+### ****MONITORING****
+###MONITORING GET ALL
+GET http://localhost:1234/monitoring
+
+###MONITORING CREATE
+POST http://localhost:1234/monitoring
+Content-Type: application/json
+
+{
+  "typeMonitoring": "Política",
+  "priorityMonitoring": "Media",
+  "confidentialityMonitoring": "Media",
+  "numMonitoring": "16",
+  "dateMonitoring": "2024-11-11",
+  "linkMonitoring": "Dirección del informe",
+  "idArea": "c7e30e65-92a9-4a15-bd4d-ab65c64073c8",
+  "idUser": "be565884-17ad-4dbb-b649-b59b37d85f0c"
+}
+
+###MONITORING DELETE
+DELETE http://localhost:1234/monitoring/9e1ee95e-989f-4b91-b105-dd0762675457
+
+###MONITORING UPDATE
+PUT http://localhost:1234/monitoring/9e1ee95e-989f-4b91-b105-dd0762675457
+Content-Type: application/json
+
+{
+  "typeMonitoring": "Internacional",
+  "priorityMonitoring": "Alta",
+  "confidentialityMonitoring": "Alta",
+  "numMonitoring": "16",
+  "dateMonitoring": "2024-11-11",
+  "linkMonitoring": "Dirección del informe",
+  "idArea": "c7e30e65-92a9-4a15-bd4d-ab65c64073c8",
+  "idUser": "be565884-17ad-4dbb-b649-b59b37d85f0c"
+}
+
+### ****WEEKLY****
+###WEEKLY GET ALL
+GET http://localhost:1234/weekly
+
+###WEEKLY CREATE
+POST http://localhost:1234/weekly
+Content-Type: application/json
+
+{
+  "numWeekly": "16",
+  "dateWeekly": "2024-11-11",
+  "linkWeekly": "Dirección del informe",
+  "idUser": "be565884-17ad-4dbb-b649-b59b37d85f0c"
+}
+
+###WEEKLY DELETE
+DELETE http://localhost:1234/weekly/285ee1ee-d6c0-437b-870d-c0d98102ab51
+
+###WEEKLY UPDATE
+PUT http://localhost:1234/weekly/285ee1ee-d6c0-437b-870d-c0d98102ab51
+Content-Type: application/json
+
+{
+  "numWeekly": "50",
+  "dateWeekly": "2024-11-11",
+  "linkWeekly": "Dirección del informe",
+  "idUser": "be565884-17ad-4dbb-b649-b59b37d85f0c"
+}
+
+### ****NGO WEEKLY****
+###NGO WEEKLY GET ALL
+GET http://localhost:1234/ngoweekly
+
+###NGO WEEKLY CREATE
+POST http://localhost:1234/ngoweekly
+Content-Type: application/json
+
+{
+  "numNgoWeekly": "16",
+  "dateNgoWeekly": "2024-11-11",
+  "linkNgoWeekly": "Dirección del informe",
+  "idUser": "be565884-17ad-4dbb-b649-b59b37d85f0c"
+}
+
+###NGO WEEKLY DELETE
+DELETE http://localhost:1234/ngoweekly/b6f9b55b-e704-465a-8075-e1e7df1f4b9d
+
+###NGO WEEKLY UPDATE
+PUT http://localhost:1234/ngoweekly/addbe0dd-8142-4085-93bc-7a29cfa10355
+Content-Type: application/json
+
+{
+  "numNgoWeekly": "50",
+  "dateNgoWeekly": "2024-11-11",
+  "linkNgoWeekly": "Dirección del informe",
+  "idUser": "be565884-17ad-4dbb-b649-b59b37d85f0c"
+}
+
+### ****ISSUES****
+###ISSUES GET ALL
+GET http://localhost:1234/issues
+
+###ISSUES CREATE
+POST http://localhost:1234/issues
+Content-Type: application/json
+
+{
+  "issueReport": "Dolar, Diesel",
+  "intensityIssue": "7",
+  "idReport": "e134241a-d158-471c-874a-9d5aa79623f1" 
+}
+
+###ISSUES DELETE 
+DELETE http://localhost:1234/issues/273023ad-1b0e-4b62-a661-cec4b1ce5a21
+
+###ISSUES UPDATE
+PUT http://localhost:1234/issues/9e79d410-7baf-437f-8e2e-d97602fde6dd
+Content-Type: application/json
+
+{
+  "issueReport": "Dolar, Diesel",
+  "intensityIssue": "7",
+  "idReport": "e134241a-d158-471c-874a-9d5aa79623f1" 
+}
+
+### ****SUBJECT ASSOCIATION****
+###SUBJECT ASSOCIATION GET ALL
+
+GET http://localhost:1234/subjects
+
+###SUBJECT ASSOCIATION CREATE
+POST http://localhost:1234/subjects
+Content-Type: application/json
+
+{
+  "idSubject": "ef9c86c8-e5b0-4caf-9be1-7b17d74cd4c3",
+  "idAssociation": "0ff0ce70-146d-46bf-8aaf-3694189b4f44"
+}
