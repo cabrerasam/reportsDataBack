@@ -23,29 +23,6 @@ Content-Type: application/json
   "nameArea": "Hola a todos"
 }
 
-### ****REGIONS****
-###REGIONS GET ALL
-GET http://localhost:1234/regions
-
-###REGIONS CREATE
-POST http://localhost:1234/regions
-Content-Type: application/json
-
-{
-  "nameRegion": "La Paz"
-}
-
-###REGIONS DELETE
-DELETE http://localhost:1234/regions/829f202d-3b5a-4103-bf48-9bfbd319d8f8
-
-###REGIONS UPDATE
-PUT http://localhost:1234/regions/829f202d-3b5a-4103-bf48-9bfbd319d8f8
-Content-Type: application/json
-
-{
-  "nameRegion": "Santa Cruz"
-}
-
 ### ****ROLES****
 ###ROLES GET ALL
 GET http://localhost:1234/roles
@@ -86,7 +63,7 @@ GET http://localhost:1234/login/authorized
 ###USERS GET ALL
 GET http://localhost:1234/users
 
-###ROLES CREATE
+###USER CREATE
 POST http://localhost:1234/users
 Content-Type: application/json
 
@@ -99,10 +76,10 @@ Content-Type: application/json
   "idRegion": "ce34f46d-e226-4fae-8ec6-6867b76d86c6"
 }
 
-###ROLES DELETE
+###USER DELETE
 DELETE http://localhost:1234/users/24ddbc66-2aa6-4c81-877f-27eac57ea32c
 
-###ROLES UPDATE
+###USER UPDATE
 PUT http://localhost:1234/users/24ddbc66-2aa6-4c81-877f-27eac57ea32c
 Content-Type: application/json
 
@@ -115,215 +92,14 @@ Content-Type: application/json
   "idRegion": "dab324c2-e972-4eba-90a3-98c842068d07"
 }
 
-### *******SUBJECTS*******
-
-### ****INDIVIDUALS****
-
-###INDIVIDUAL GETALL
-GET http://localhost:1234/individuals
-
-###INDIVIDUAL GET
-GET http://localhost:1234/individuals/a60f2f67-b4df-4c2e-bd23-c074f7e229d1
-
-###INDIVIDUAL CREATE
-POST http://localhost:1234/individuals
-Content-Type: application/json
-
-{
-  "nameIndividual": "Alejandro Cabrera",
-  "nationalityIndividual": "Boliviano",
-  "birthDateIndividual": "1984-07-07",
-  "placeBirthIndividual": "La Paz",
-  "genderIndividual": "Masculino",
-  "maritalIndividual": "Casado",
-  "photoIndividual": "http://ruta.foto",
-  "partyIndividual": "MAS",
-  "workIndividual": "Programador",
-  "educationIndividual": "Lic.",
-  "emailIndividual": "alcazar.samuel@gmail.com",
-  "phoneIndividual": "67100787",
-  "networksIndividual": {
-    "facebook": "https://facebook.com",
-    "x": "https://x.com"
-  },
-  "idUser": "be565884-17ad-4dbb-b649-b59b37d85f0c"
-}
-
-###INDIVIDUAL DELETE
-DELETE http://localhost:1234/individuals/fbc4fc9b-f4a0-4872-9612-09ceff310ef6
-
-###INDIVIDUAL UPDATE
-PUT http://localhost:1234/individuals/93853051-1122-4683-8c08-1bffab7d3ca3
-Content-Type: application/json
-
-{
-  "nameIndividual": "Alejandro Samuel Cabrera",
-  "nationalityIndividual": "Boliviano",
-  "birthDateIndividual": "1984-07-07",
-  "placeBirthIndividual": "El Alto",
-  "genderIndividual": "Masculino",
-  "maritalIndividual": "Casado",
-  "photoIndividual": "http://ruta.foto",
-  "partyIndividual": "MAS",
-  "workIndividual": "Programador",
-  "educationIndividual": "Lic.",
-  "emailIndividual": "alcazar.samuel@gmail.com",
-  "phoneIndividual": "67100787",
-  "networksIndividual": {
-    "facebook": "https://facebook.com",
-    "x": "https://x.com"
-  },
-  "idUser": "be565884-17ad-4dbb-b649-b59b37d85f0c"
-}
-
-###COLLECTIVES
-
-###COLLECTIVE GETALL
-GET http://localhost:1234/collectives
-
-###COLLECTIVE CREATE
-POST http://localhost:1234/collectives
-Content-Type: application/json
-
-{
-  "nameCollective": "MNR",
-  "logoCollective": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
-  "originCollective": "Nacional",
-  "typeCollective": "Partido político",
-  "headquartersCollective": "El Alto",
-  "descriptionCollective": "En la actualidad el CEADL, es una creación colectiva de grupos de jóvenes y profesionales.",
-  "missionCollective": "Fortalecemos personas y organizaciones sociales en sus capacidades participativas y de incidencia para construir una cultura e institucionalidad democrática en el Estado y la sociedad civil, precautelando el ejercicio pleno de los Derechos Humanos y Ciudadanos a nivel local y nacional, en el marco de los Objetivos de Desarrollo Sostenible.",
-  "visionCollective": "Personas individuales y organizaciones de la sociedad civil, con énfasis en las juventudes, mujeres y pueblos indígenas, participan de forma organizada, democrática y equitativa en diversos espacios sociopolíticos para la reivindicación y el ejercicio pleno de sus Derechos Humanos y Ciudadanos.",
-  "networkCollective": {
-    "facebook": "https://facebook.com/ceadl",
-    "x": "https://x.com/ceadl"
-  },
-  "infAreaCollective": "El Alto, Lapaz, Sucre, Tarija",
-  "financingCollective": "SAIH Noruega",
-  "personalCollective": {
-    "director": "Juan Carlos Balderas",
-    "técnico": "Joel Ibarra Batallanos"
-  },
-  "idUser": "a80ff520-4086-4bc0-ac38-2f8efa39d4e4"
-}
-
-###COLLECTIVE DELETE
-DELETE http://localhost:1234/collectives/f027e4e3-e73f-4531-ad16-cf2203f88b7d
-
-###COLLECTIVE UPDATE
-PUT http://localhost:1234/collectives/58408223-bd1f-4a8b-b06c-1cfd559954f8
-Content-Type: application/json
-
-{
-  "nameCollective": "CEDLA",
-  "originCollective": "Nacional",
-  "typeCollective": "ONG",
-  "headquartersCollective": "El Alto",
-  "descriptionCollective": "En la actualidad el CEADL, es una creación colectiva de grupos de jóvenes y profesionales.",
-  "missionCollective": "Fortalecemos personas y organizaciones sociales en sus capacidades participativas y de incidencia para construir una cultura e institucionalidad democrática en el Estado y la sociedad civil, precautelando el ejercicio pleno de los Derechos Humanos y Ciudadanos a nivel local y nacional, en el marco de los Objetivos de Desarrollo Sostenible.",
-  "visionCollective": "Personas individuales y organizaciones de la sociedad civil, con énfasis en las juventudes, mujeres y pueblos indígenas, participan de forma organizada, democrática y equitativa en diversos espacios sociopolíticos para la reivindicación y el ejercicio pleno de sus Derechos Humanos y Ciudadanos.",
-  "networkCollective": {
-    "facebook": "https://facebook.com/ceadl",
-    "x": "https://x.com/ceadl"
-  },
-  "infAreaCollective": "El Alto, Lapaz, Sucre, Tarija",
-  "financingCollective": "SAIH Noruega",
-  "personalCollective": {
-    "director": "Juan Carlos Balderas",
-    "técnico": "Joel Ibarra Batallanos"
-  },
-  "idUser": "be565884-17ad-4dbb-b649-b59b37d85f0c"
-}
-
-### ****ASSOCIATIONS****
-###ASSOCIATIONS GET ALL
-GET http://localhost:1234/associations
-
-###ASSOCIATIONS CREATE
-POST http://localhost:1234/associations
-Content-Type: application/json
-
-{
-  "association": "Estado mayor del pueblo",
-  "idUser": "b4b23652-3a82-4d0d-a541-a1f88fd93f6f"
-}
-
-###ASSOCIATIONS DELETE
-DELETE http://localhost:1234/associations/d57125d9-f1fb-4efd-b4a3-1e8fe74fd41e
-
-###ASSOCIATIONS UPDATE
-PUT http://localhost:1234/associations/0ff0ce70-146d-46bf-8aaf-3694189b4f44
-Content-Type: application/json
-
-{
-  "association": "Estado Mayor del Pueblo",
-  "idUser": "b4b23652-3a82-4d0d-a541-a1f88fd93f6f"
-}
-
-### ****SPEACHS****
-###SPEACHS GET ALL
-GET http://localhost:1234/speachs
-
-###SPEACHS CREATE
-POST http://localhost:1234/speachs
-Content-Type: application/json
-
-{
-  "speach": "Dirección del discurso",
-  "titleSpeach": "Estado mayor",
-  "dateSpeach": "2024-11-11",
-  "idIndividual": "60ce9c33-e05b-4391-91e2-0ffd80caf7dd",
-  "idUser": "45a2d827-7de0-4f25-b59f-0cb881331181"
-}
-
-###SPEACHS DELETE
-DELETE http://localhost:1234/speachs/0e2185e3-b1d0-441c-9651-0bfa1c5e8ad6
-
-###SPEACHS UPDATE
-PUT http://localhost:1234/speachs/0e2185e3-b1d0-441c-9651-0bfa1c5e8ad6
-Content-Type: application/json
-
-{
-  "speach": "Estado mayor",
-  "idIndividual": "cdabc1d9-51a3-42fc-9774-0ab27a926cf7",
-  "idUser": "be565884-17ad-4dbb-b649-b59b37d85f0c"
-}
-
-### ****WORKS****
-###WORKS GET ALL
-GET http://localhost:1234/works
-
-###WORKS CREATE
-POST http://localhost:1234/works
-Content-Type: application/json
-
-{
-  "work": "Dirección del discurso",
-  "idIndividual": "cdabc1d9-51a3-42fc-9774-0ab27a926cf7",
-  "idUser": "be565884-17ad-4dbb-b649-b59b37d85f0c"
-}
-
-###WORKS DELETE
-DELETE http://localhost:1234/works/c94c4567-5d6f-4670-a825-c908a78dbe47
-
-###WORKS UPDATE
-PUT http://localhost:1234/works/c94c4567-5d6f-4670-a825-c908a78dbe47
-Content-Type: application/json
-
-{
-  "work": "Presidente",
-  "idIndividual": "cdabc1d9-51a3-42fc-9774-0ab27a926cf7",
-  "idUser": "be565884-17ad-4dbb-b649-b59b37d85f0c"
-}
-
 ### *******REPORTS*******
 
-### ****DIARIES****
-###DIARIES GET ALL
-GET http://localhost:1234/diaries
+### ****SPECIALS****
+###SPECIALS GET ALL
+GET http://localhost:1234/SPECIALS
 
-###DIARIES CREATE
-POST http://localhost:1234/diaries
+###SPECIALS CREATE
+POST http://localhost:1234/SPECIALS
 Content-Type: application/json
 
 {
@@ -332,16 +108,15 @@ Content-Type: application/json
   "confidentialityDiary": "Media",
   "numDiary": "16",
   "dateDiary": "2024-11-11",
-  "issueDiary": "Dolar, Diesel",
   "linkDiary": "Dirección del informe",
   "idUser": "be565884-17ad-4dbb-b649-b59b37d85f0c"
 }
 
-###DIARIES DELETE
-DELETE http://localhost:1234/diaries/c6d0e95d-a6c2-4f4b-a678-08d5f8ccd78d
+###SPECIALS DELETE
+DELETE http://localhost:1234/SPECIALS/c6d0e95d-a6c2-4f4b-a678-08d5f8ccd78d
 
-###DIARIES UPDATE
-PUT http://localhost:1234/diaries/c6d0e95d-a6c2-4f4b-a678-08d5f8ccd78d
+###SPECIALS UPDATE
+PUT http://localhost:1234/SPECIALS/c6d0e95d-a6c2-4f4b-a678-08d5f8ccd78d
 Content-Type: application/json
 
 {
@@ -350,7 +125,6 @@ Content-Type: application/json
   "confidentialityDiary": "Alta",
   "numDiary": "16",
   "dateDiary": "2024-11-11",
-  "issueDiary": "Dolar, Diesel",
   "linkDiary": "Dirección del informe",
   "idUser": "be565884-17ad-4dbb-b649-b59b37d85f0c"
 }
