@@ -5,7 +5,7 @@ const { Pool } = pg
 const config = {
   host: 'localhost',
   port: 5432,
-  database: 'report',
+  database: 'reports',
   user: 'report',
   password: 'mi4v-aee3-5939'
 }
