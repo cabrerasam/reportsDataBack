@@ -14,8 +14,7 @@ const usersSchema = z.object({
     required_error: 'Password for user is required'
   }),
   idArea: z.string(),
-  idRole: z.string(),
-  idRegion: z.string()
+  idRole: z.string()
 })
 
 export function validateUser (object) {
