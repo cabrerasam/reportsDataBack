@@ -18,10 +18,10 @@ export class LoginController {
       const token = jwt.sign(
         {
           userNick: user[0].validate_user.user_nick,
+          userName: user[0].validate_user.user_name,
           idUser: user[0].validate_user.id_user,
           idRole: user[0].validate_user.id_role,
-          idArea: user[0].validate_user.id_area,
-          idRegion: user[0].validate_user.id_region
+          idArea: user[0].validate_user.id_area
         },
         SECRET_JWT_TOKEN,
         { expiresIn: '8h' }
